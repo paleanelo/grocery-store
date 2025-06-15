@@ -13,7 +13,7 @@ $(document).on('click', '.add-to-cart', function () {
     var wrapper = $(this).closest('.cart-action-wrapper');
 
     $.ajax({
-        url: '/web/cart/add?id=' + productId,
+        url: '/cart/add?id=' + productId,
         type: 'POST',
         headers: {
             'X-CSRF-Token': yii.getCsrfToken()
@@ -36,7 +36,7 @@ $(document).on('click', '.increase-qty', function () {
     var container = $(this).closest('.quantity-controls');
 
     $.ajax({
-        url: '/web/cart/add?id=' + productId,
+        url: '/cart/add?id=' + productId,
         type: 'POST',
         headers: {
             'X-CSRF-Token': yii.getCsrfToken()
