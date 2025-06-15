@@ -54,7 +54,7 @@ $(document).on('click', '.decrease-qty', function () {
     var container = $(this).closest('.quantity-controls');
 
     $.ajax({
-        url: '/web/cart/decrease?id=' + productId,
+        url: '/cart/decrease?id=' + productId,
         type: 'POST',
         headers: {
             'X-CSRF-Token': yii.getCsrfToken()
