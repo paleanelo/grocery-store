@@ -1,0 +1,5 @@
+[build]
+command = "composer install --no-dev"
+
+[start]
+command = "php -S 0.0.0.0:$PORT -t web"
