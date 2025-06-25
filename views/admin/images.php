@@ -32,8 +32,9 @@ $this->title = 'Изображения товаров';
             [
                 'attribute' => 'image_path',
                 'contentOptions' => [
-                    'style' => 'max-width: 600px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;',
+                    'style' => 'max-width: 500px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;',
                 ],
+                'label' => 'Путь к фото',
             ],
             [
                 'attribute' => 'is_main',
@@ -44,6 +45,19 @@ $this->title = 'Изображения товаров';
                 'class' => 'yii\grid\ActionColumn',
                 'controller' => 'product-image',
                 'template' => '{update} {delete}',
+                'buttons' => [
+                    'delete' => function ($url, $model, $key) {
+                        return Html::a('<i class="bi bi-trash"></i>', ['product-image/delete', 'id' => $model->id], [
+                            'class' => 'btn btn-outline-danger btn-sm',
+                            'title' => 'Удалить',
+                            'aria-label' => 'Удалить',
+                            'data' => [
+                                'confirm' => 'Вы уверены, что хотите удалить это изображение?',
+                                'method' => 'post',
+                            ],
+                        ]);
+                    },
+                ],
             ],
         ],
     ]) ?>

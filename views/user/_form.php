@@ -8,6 +8,14 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 
 <style>
+    .help-block {
+        color: red !important;
+    }
+
+    .has-error .form-control {
+        border-color: red;
+    }
+
     .btn-orange {
         background-color: #fd7e14;
         color: #fff;

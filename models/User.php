@@ -46,10 +46,12 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
             [['auth_key'], 'string', 'max' => 32],
             ['password', 'required', 'on' => self::SCENARIO_DEFAULT, 'message' => 'Обязательное поле'], // Только при регистрации
             ['password', 'safe', 'on' => self::SCENARIO_UPDATE], // При обновлении - безопасное поле
+            ['full_name', 'match', 'pattern' => '/^[А-Яа-яЁё\s]+$/u', 'message' => 'ФИО должно содержать только кириллические буквы и пробелы'],
             [['username'], 'unique', 'message' => 'Этот логин уже занят.'],
             [['email'], 'unique', 'message' => 'Аккаунт с этой почтой уже существует.'],
             ['email', 'email', 'message' => 'Введите корректный email'],
             ['password', 'string', 'tooShort' => 'Пароль должен содержать минимум 6 символов', 'min' => 6],
+            ['agree', 'required', 'requiredValue' => 1, 'message' => 'Вы должны согласиться на обработку данных'],
             ['agree', 'boolean'],
             [['role_id'], 'exist', 'skipOnError' => true, 'targetClass' => Role::class, 'targetAttribute' => ['role_id' => 'id']],
         ];

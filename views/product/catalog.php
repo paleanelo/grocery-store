@@ -26,6 +26,9 @@ $this->title = 'Каталог товаров';
             'fieldConfig' => ['template' => "{input}\n{error}"],
         ]); ?>
 
+        <!-- Скрытое поле для передачи выбранной категории -->
+        <?= Html::hiddenInput('ProductSearch[categoryName]', $searchModel->categoryName, ['id' => 'category-hidden-input']) ?>
+
         <div class="d-flex w-100 mb-2" style="gap: 10px;">
             <?= Html::activeTextInput($searchModel, 'name', [
                 'class' => 'form-control',
@@ -52,20 +55,21 @@ $this->title = 'Каталог товаров';
                 'style' => 'max-width: 200px;',
             ]) ?>
         </div>
+
         <?php ActiveForm::end(); ?>
     </div>
 
     <!-- Категории -->
     <div class="category-buttons pt-3 mb-4 text-center">
-        <?= Html::a('Смотреть все', ['product/catalog'], [
-            'class' => empty($searchModel->categoryName) ? 'btn btn-success m-1' : 'btn btn-outline-success m-1',
-            'data-pjax' => 1
-        ]) ?>
+        <button class="<?= empty($searchModel->categoryName) ? 'btn btn-success m-1' : 'btn btn-outline-success m-1' ?>"
+                data-category="">
+            Смотреть все
+        </button>
         <?php foreach ($categories as $category): ?>
-            <?= Html::a(Html::encode($category->name), ['product/catalog', 'ProductSearch[categoryName]' => $category->name], [
-                'class' => ($searchModel->categoryName === $category->name) ? 'btn btn-success m-1' : 'btn btn-outline-success m-1',
-                'data-pjax' => 1
-            ]) ?>
+            <button class="<?= ($searchModel->categoryName === $category->name) ? 'btn btn-success m-1' : 'btn btn-outline-success m-1' ?>"
+                    data-category="<?= Html::encode($category->name) ?>">
+                <?= Html::encode($category->name) ?>
+            </button>
         <?php endforeach; ?>
     </div>
 
@@ -97,16 +101,30 @@ document.addEventListener('click', function (event) {
     }
 });
 
-// Автоматическая отправка формы при смене сортировки
+// При выборе сортировки — отправить форму (с сохранённой категорией)
 document.addEventListener('change', function (event) {
     if (event.target.id === 'sort-select') {
         const form = document.getElementById('product-search-form');
         if (form) {
-            form.submit(); // обычная отправка, но с data-pjax
+            form.submit();
+        }
+    }
+});
+
+// При выборе категории — обновить скрытое поле и отправить форму
+document.addEventListener('click', function (event) {
+    if (event.target.matches('button[data-category]')) {
+        const category = event.target.getAttribute('data-category');
+        const categoryInput = document.getElementById('category-hidden-input');
+        if (categoryInput) {
+            categoryInput.value = category;
+        }
+
+        const form = document.getElementById('product-search-form');
+        if (form) {
+            form.submit();
         }
     }
 });
 JS);
 ?>
-
-

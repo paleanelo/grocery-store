@@ -69,6 +69,9 @@ $config = [
             ],
         ],
 
+        'cartManager' => [
+            'class' => 'app\components\CartManager',
+        ],
     ],
     'params' => $params,
 ];

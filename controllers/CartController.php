@@ -2,6 +2,8 @@
 
 namespace app\controllers;
 use Yii;
+use yii\web\Response;
+use app\components\CartManager;
 
 use app\models\Cart;
 use app\models\CartSearch;
@@ -46,13 +48,44 @@ class CartController extends Controller
      */
     public function actionIndex()
     {
-        $userId = Yii::$app->user->id;
-        $cart = Cart::find()->where(['user_id' => $userId])->orderBy(['created_at' => SORT_DESC])->one();
+        if (Yii::$app->user->isGuest) {
+            $guestCart = \app\components\CartManager::getGuestCart();
+            $cartItems = [];
 
-        $totalPrice = $cart ? $cart->getTotalPrice() : 0;
+            foreach ($guestCart as $productId => $quantity) {
+                $product = \app\models\Product::findOne($productId);
+                if ($product) {
+                    $cartItem = new \app\models\CartItem([
+                        'product_id' => $productId,
+                        'quantity' => $quantity,
+                    ]);
+                    $cartItem->populateRelation('product', $product);
+                    $cartItems[] = $cartItem;
+                }
+            }
+
+            $cart = null; // Не нужен объект Cart
+            $totalPrice = 0;
+            foreach ($cartItems as $item) {
+                $product = $item->product;
+                $price = $product->price_per_box ?? $product->price_per_kg ?? 0;
+                $totalPrice += $item->quantity * $price;
+            }
+
+        } else {
+            $cart = \app\models\Cart::find()
+                ->where(['user_id' => Yii::$app->user->id])
+                ->orderBy(['created_at' => SORT_DESC])
+                ->with('cartItems.product.productImages')
+                ->one();
+
+            $cartItems = $cart ? $cart->cartItems : [];
+            $totalPrice = $cart ? $cart->getTotalPrice() : 0;
+        }
 
         return $this->render('index', [
             'cart' => $cart,
+            'cartItems' => $cartItems,
             'totalPrice' => $totalPrice,
         ]);
     }
@@ -143,6 +176,15 @@ class CartController extends Controller
             return ['success' => false, 'message' => 'Товар не найден'];
         }
 
+        // 👉 Для гостя — сохраняем в сессию
+        if (Yii::$app->user->isGuest) {
+            CartManager::addToGuestCart($id, 1);
+            $guestCart = CartManager::getGuestCart();
+            $quantity = $guestCart[$id] ?? 1;
+            return ['success' => true, 'quantity' => $quantity];
+        }
+
+        // 👉 Для авторизованного — сохраняем в БД
         $userId = Yii::$app->user->id;
 
         $cart = Cart::find()
@@ -177,9 +219,37 @@ class CartController extends Controller
     {
         Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
 
+        // 👤 Гость
+        if (Yii::$app->user->isGuest) {
+            $guestCart = \app\components\CartManager::getGuestCart();
+
+            if (!isset($guestCart[$id])) {
+                return ['success' => false, 'message' => 'Товар не найден в корзине'];
+            }
+
+            // 👉 Удаление по флагу force=1
+            if (Yii::$app->request->get('force') == 1) {
+                unset($guestCart[$id]);
+                \app\components\CartManager::saveGuestCart($guestCart);
+                return ['success' => true, 'quantity' => 0];
+            }
+
+            // Уменьшение количества
+            $guestCart[$id]--;
+            if ($guestCart[$id] <= 0) {
+                unset($guestCart[$id]);
+                \app\components\CartManager::saveGuestCart($guestCart);
+                return ['success' => true, 'quantity' => 0];
+            }
+
+            \app\components\CartManager::saveGuestCart($guestCart);
+            return ['success' => true, 'quantity' => $guestCart[$id]];
+        }
+
+        // 👤 Авторизованный пользователь
         $userId = Yii::$app->user->id;
 
-        $cart = Cart::find()
+        $cart = \app\models\Cart::find()
             ->where(['user_id' => $userId])
             ->orderBy(['created_at' => SORT_DESC])
             ->one();
@@ -188,7 +258,7 @@ class CartController extends Controller
             return ['success' => false, 'message' => 'Корзина не найдена'];
         }
 
-        $item = CartItem::findOne(['cart_id' => $cart->id, 'product_id' => $id]);
+        $item = \app\models\CartItem::findOne(['cart_id' => $cart->id, 'product_id' => $id]);
 
         if (!$item) {
             return ['success' => false, 'message' => 'Товар не найден в корзине'];
@@ -204,8 +274,8 @@ class CartController extends Controller
         $item->save(false);
         return ['success' => true, 'quantity' => $item->quantity];
     }
-    
 
+    
     public function actionCheckout()
     {
         $userId = Yii::$app->user->id;
@@ -312,40 +382,63 @@ class CartController extends Controller
         if ($isAjax) {
             Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
         }
-    
+
+        if (Yii::$app->user->isGuest) {
+            $guestCart = \app\components\CartManager::getGuestCart();
+            if (isset($guestCart[$id])) {
+                unset($guestCart[$id]);
+                \app\components\CartManager::saveGuestCart($guestCart);
+                return ['success' => true];
+            }
+            return ['success' => false, 'message' => 'Товар не найден в корзине'];
+        }
+
         $item = \app\models\CartItem::findOne($id);
         if (!$item || $item->cart->user_id !== Yii::$app->user->id) {
-            if ($isAjax) {
-                return ['success' => false, 'message' => 'Ошибка доступа'];
-            } else {
-                Yii::$app->session->setFlash('error', 'Ошибка доступа');
-                return $this->redirect(['cart/index']);
-            }
+            return ['success' => false, 'message' => 'Ошибка доступа'];
         }
-    
+
         $deleted = $item->delete();
-    
-        if ($isAjax) {
-            return ['success' => $deleted];
-        } else {
-            if ($deleted) {
-                Yii::$app->session->setFlash('success', 'Товар удален из корзины');
-            } else {
-                Yii::$app->session->setFlash('error', 'Не удалось удалить товар');
-            }
-            return $this->redirect(['cart/index']);
-        }
+        return ['success' => $deleted];
     }
+
     
     public function actionUpdateQuantity($item_id)
     {
         Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
-
         $quantity = Yii::$app->request->post('quantity');
+
         if (!$quantity || $quantity < 1) {
             return ['success' => false, 'message' => 'Неверное количество'];
         }
 
+        // Для гостей — обновляем в сессии
+        if (Yii::$app->user->isGuest) {
+            $guestCart = \app\components\CartManager::getGuestCart();
+            if (!isset($guestCart[$item_id])) {
+                return ['success' => false, 'message' => 'Товар не найден в корзине'];
+            }
+            $guestCart[$item_id] = $quantity;
+            \app\components\CartManager::saveGuestCart($guestCart);
+
+            // Посчитаем сумму вручную
+            $total = 0;
+            foreach ($guestCart as $productId => $qty) {
+                $product = \app\models\Product::findOne($productId);
+                if ($product) {
+                    $price = $product->price_per_box ?? $product->price_per_kg ?? 0;
+                    $total += $qty * $price;
+                }
+            }
+
+            return [
+                'success' => true,
+                'quantity' => $quantity,
+                'totalPrice' => number_format($total, 0, '.', ' ') . ' ₽'
+            ];
+        }
+
+        // Авторизованный пользователь
         $cartItem = \app\models\CartItem::findOne(['id' => $item_id]);
         if (!$cartItem) {
             return ['success' => false, 'message' => 'Товар не найден в корзине'];
@@ -356,27 +449,19 @@ class CartController extends Controller
             return ['success' => false, 'message' => 'Не удалось обновить товар'];
         }
 
-        // Получаем корзину текущего пользователя
         $cart = \app\models\Cart::findOne(['id' => $cartItem->cart_id]);
 
-        // Расчёт общей суммы вручную
         $total = 0;
         foreach ($cart->cartItems as $item) {
             $product = $item->product;
-            if ($product->price_per_box !== null) {
-                $total += $product->price_per_box * $item->quantity;
-            } elseif ($product->price_per_kg !== null) {
-                $total += $product->price_per_kg * $item->quantity;
-            }
+            $price = $product->price_per_box ?? $product->price_per_kg ?? 0;
+            $total += $price * $item->quantity;
         }
-
-        // Форматируем сумму без intl
-        $formattedTotal = number_format($total, 0, '.', ' ') . ' ₽';
 
         return [
             'success' => true,
             'quantity' => $cartItem->quantity,
-            'totalPrice' => $formattedTotal,
+            'totalPrice' => number_format($total, 0, '.', ' ') . ' ₽'
         ];
     }
 }

@@ -48,7 +48,7 @@ class VkParserController extends Controller
 
         if (!file_exists($tokenPath)) {
             Yii::$app->session->setFlash('error', 'Файл с токеном не найден.');
-            return $this->goBack();
+            return $this->redirect(['admin/products']);
         }
 
         $tokenData = require $tokenPath;
@@ -56,7 +56,7 @@ class VkParserController extends Controller
 
         if (!$token) {
             Yii::$app->session->setFlash('error', 'Токен не указан.');
-            return $this->goBack();
+            return $this->redirect(['admin/products']);
         }
 
         $client = new Client();
@@ -75,7 +75,7 @@ class VkParserController extends Controller
         if (!$response->isOk || !isset($response->data['response']['items'])) {
             $error = $response->data['error']['error_msg'] ?? 'Ошибка запроса к VK.';
             Yii::$app->session->setFlash('error', "Ошибка при получении данных из VK: {$error}");
-            return $this->goBack();
+            return $this->redirect(['admin/products']);
         }
 
         $items = $response->data['response']['items'];

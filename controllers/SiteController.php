@@ -101,6 +101,8 @@ class SiteController extends Controller
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
+            // 👉 Слияние корзины гостя с корзиной пользователя
+            \app\components\CartManager::mergeGuestCartToUser(Yii::$app->user->id);
             return $this->goBack();
         }
 

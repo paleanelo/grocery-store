@@ -47,15 +47,26 @@ class Product extends \yii\db\ActiveRecord
         return [
             [['slug', 'price_per_kg', 'price_per_box', 'avg_weight', 'description', 'expire_days'], 'default', 'value' => null],
             [['is_active'], 'default', 'value' => 1],
+
             [['category_id', 'name'], 'required', 'message' => 'Обязательное поле'],
-            [['category_id', 'is_active', 'expire_days'], 'integer'],
-            [['price_per_kg', 'price_per_box', 'avg_weight'], 'number'],
+
+            [['category_id', 'is_active', 'expire_days'], 'integer', 'message' => 'Допустимы только целые числа'],
+            [['expire_days'], 'match', 'pattern' => '/^\d+$/', 'message' => 'Допустимы только цифры'],
+
+            [['price_per_kg', 'price_per_box', 'avg_weight'], 'match', 'pattern' => '/^\d+(\.\d{1,2})?$/', 'message' => 'Допустимы только цифры и точка'],
+            [['price_per_kg', 'price_per_box', 'avg_weight'], 'number', 'message' => 'Значение должно быть числом'],
+
             [['description'], 'string'],
             [['created_at', 'updated_at'], 'safe'],
+
             [['name', 'slug'], 'string', 'max' => 255],
-            [['slug'], 'unique'],
+            [['name'], 'match', 'pattern' => '/^[А-Яа-яЁё\s\-]+$/u', 'message' => 'Допустимы только кириллические символы и пробелы'],
+
+            [['slug'], 'unique', 'message' => 'Этот URL уже используется'],
+
             [['mainImageFile'], 'file', 'extensions' => 'png, jpg, jpeg', 'skipOnEmpty' => true],
-            [['extraImageFiles'], 'file', 'extensions' => 'png, jpg, jpeg', 'maxFiles' => 4, 'skipOnEmpty' => true],
+            [['extraImageFiles'], 'file', 'extensions' => 'png, jpg, jpeg', 'maxFiles' => 4, 'skipOnEmpty' => true, 'tooMany' => 'Можно загрузить не более 4 файлов.'],
+
             [['category_id'], 'exist', 'skipOnError' => true, 'targetClass' => Category::class, 'targetAttribute' => ['category_id' => 'id']],
         ];
     }

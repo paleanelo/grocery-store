@@ -68,6 +68,20 @@ $this->title = 'Управление товарами';
             'class' => 'yii\grid\ActionColumn',
             'controller' => 'product',
             'template' => '{view} {update} {delete}',
+            'buttons' => [
+                'delete' => function ($url, $model, $key) {
+                    return Html::a('<i class="bi bi-trash"></i>', ['product/delete', 'id' => $model->id], [
+                        'class' => 'btn btn-outline-danger btn-sm',
+                        'title' => 'Удалить',
+                        'aria-label' => 'Удалить',
+                        'data' => [
+                            'confirm' => 'Вы уверены, что хотите удалить этот товар?',
+                            'method' => 'post',
+                        ],
+                    ]);
+                },
+            ],
+            'contentOptions' => ['style' => 'white-space: nowrap; text-align: center; width: 120px;'],
         ],
     ],
 ]) ?>

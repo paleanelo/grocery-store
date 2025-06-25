@@ -38,8 +38,15 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
 
 <div id="flash-wrapper" style="position: relative; z-index: 1055;">
     <?php foreach (Yii::$app->session->getAllFlashes() as $type => $message): ?>
+        <?php
+            if ($type === 'error') {
+                $bootstrapType = 'danger';
+            } else {
+                $bootstrapType = $type;
+            }
+        ?>
         <?php if (!empty($message) && is_string($message)): ?>
-            <div class="alert alert-<?= $type ?> alert-dismissible fade show flash-fixed" role="alert">
+            <div class="alert alert-<?= $bootstrapType ?> alert-dismissible fade show flash-fixed" role="alert" data-autoclose="<?= $bootstrapType !== 'danger' ? 'true' : 'false' ?>">
                 <?= $message ?>
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Закрыть"></button>
             </div>

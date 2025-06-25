@@ -48,7 +48,20 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
             [
                 'class' => ActionColumn::className(),
-                'template' => '{update} {delete}', 
+                'template' => '{update} {delete}', // можно указать только {delete}, если нужно
+                'buttons' => [
+                    'delete' => function ($url, $model, $key) {
+                        return Html::a('<i class="bi bi-trash"></i>', ['delete', 'id' => $model->id], [
+                            'class' => 'btn btn-outline-danger btn-sm',
+                            'title' => 'Удалить',
+                            'aria-label' => 'Удалить',
+                            'data' => [
+                                'confirm' => 'Вы уверены, что хотите удалить эту категорию?',
+                                'method' => 'post',
+                            ],
+                        ]);
+                    },
+                ],
                 'urlCreator' => function ($action, Category $model, $key, $index, $column) {
                     return Url::toRoute([$action, 'id' => $model->id]);
                 },

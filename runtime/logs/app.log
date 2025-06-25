@@ -24124,3 +24124,1574 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1749769329.6148
     'REQUEST_TIME' => 1749769329
 ]
+2025-06-23 22:54:51 [127.0.0.1][2][v1l56lfpdkrnbogcda7j698kjkcp1ua5][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Setting unknown property: yii\grid\GridView::buttons in C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Component.php:221
+Stack trace:
+#0 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\BaseYii.php(557): yii\base\Component->__set()
+#1 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\BaseObject.php(107): yii\BaseYii::configure()
+#2 [internal function]: yii\base\BaseObject->__construct()
+#3 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\di\Container.php(419): ReflectionClass->newInstanceArgs()
+#4 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\di\Container.php(170): yii\di\Container->build()
+#5 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\BaseYii.php(365): yii\di\Container->get()
+#6 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Widget.php(146): yii\BaseYii::createObject()
+#7 C:\OSPanel\domains\grocery-store\views\admin\products.php(16): yii\base\Widget::widget()
+#8 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\View.php(348): require('C:\\OSPanel\\doma...')
+#9 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile()
+#10 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile()
+#11 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render()
+#12 C:\OSPanel\domains\grocery-store\controllers\AdminController.php(41): yii\base\Controller->render()
+#13 [internal function]: app\controllers\AdminController->actionProducts()
+#14 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array()
+#15 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams()
+#16 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction()
+#17 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction()
+#18 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest()
+#19 C:\OSPanel\domains\grocery-store\web\index.php(12): yii\base\Application->run()
+#20 {main}
+2025-06-23 22:54:51 [127.0.0.1][2][v1l56lfpdkrnbogcda7j698kjkcp1ua5][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity' => '7abd32991104108f4661ec28d6cb89b263b85888c29fb03bd9fd1c58f6eabb29a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[2,\"ci0WkqB3kOUfkeybsVAAVI6Lh7cRqSGz\",2592000]\";}'
+    'PHPSESSID' => 'v1l56lfpdkrnbogcda7j698kjkcp1ua5'
+    '_csrf' => '00dd4b38f4e5fb69b092db2dac9b22ab5f6ed0d16554f9d758c17b5c6fbd3feca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"DJMk3j496TedkWAhX7odmuNC6MocJod-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+    '__authKey' => 'ci0WkqB3kOUfkeybsVAAVI6Lh7cRqSGz'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'grocery-store'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_REFERER' => 'http://grocery-store/web/admin/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_identity=7abd32991104108f4661ec28d6cb89b263b85888c29fb03bd9fd1c58f6eabb29a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22ci0WkqB3kOUfkeybsVAAVI6Lh7cRqSGz%22%2C2592000%5D%22%3B%7D; PHPSESSID=v1l56lfpdkrnbogcda7j698kjkcp1ua5; _csrf=00dd4b38f4e5fb69b092db2dac9b22ab5f6ed0d16554f9d758c17b5c6fbd3feca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22DJMk3j496TedkWAhX7odmuNC6MocJod-%22%3B%7D'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP_8.1\\ext;c:\\ospanel\\modules\\php\\PHP_8.1\\pear;c:\\ospanel\\modules\\php\\PHP_8.1\\pear\\bin;c:\\ospanel\\modules\\php\\PHP_8.1;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\database\\MySQL-8.0-Win10\\bin;c:\\ospanel\\modules\\http\\Apache_2.4-PHP_8.0-8.1\\bin;c:\\ospanel\\modules\\http\\Apache_2.4-PHP_8.0-8.1;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'grocery-store'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/grocery-store'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/grocery-store'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/grocery-store/web/index.php'
+    'REMOTE_PORT' => '56574'
+    'REDIRECT_URL' => '/web/admin/products'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/web/admin/products'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1750708491.6794
+    'REQUEST_TIME' => 1750708491
+]
+2025-06-23 22:56:10 [127.0.0.1][2][v1l56lfpdkrnbogcda7j698kjkcp1ua5][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Setting unknown property: yii\grid\GridView::0 in C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Component.php:221
+Stack trace:
+#0 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\BaseYii.php(557): yii\base\Component->__set()
+#1 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\BaseObject.php(107): yii\BaseYii::configure()
+#2 [internal function]: yii\base\BaseObject->__construct()
+#3 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\di\Container.php(419): ReflectionClass->newInstanceArgs()
+#4 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\di\Container.php(170): yii\di\Container->build()
+#5 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\BaseYii.php(365): yii\di\Container->get()
+#6 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Widget.php(146): yii\BaseYii::createObject()
+#7 C:\OSPanel\domains\grocery-store\views\admin\products.php(16): yii\base\Widget::widget()
+#8 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\View.php(348): require('C:\\OSPanel\\doma...')
+#9 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile()
+#10 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile()
+#11 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render()
+#12 C:\OSPanel\domains\grocery-store\controllers\AdminController.php(41): yii\base\Controller->render()
+#13 [internal function]: app\controllers\AdminController->actionProducts()
+#14 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array()
+#15 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams()
+#16 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction()
+#17 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction()
+#18 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest()
+#19 C:\OSPanel\domains\grocery-store\web\index.php(12): yii\base\Application->run()
+#20 {main}
+2025-06-23 22:56:10 [127.0.0.1][2][v1l56lfpdkrnbogcda7j698kjkcp1ua5][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity' => '7abd32991104108f4661ec28d6cb89b263b85888c29fb03bd9fd1c58f6eabb29a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[2,\"ci0WkqB3kOUfkeybsVAAVI6Lh7cRqSGz\",2592000]\";}'
+    'PHPSESSID' => 'v1l56lfpdkrnbogcda7j698kjkcp1ua5'
+    '_csrf' => '00dd4b38f4e5fb69b092db2dac9b22ab5f6ed0d16554f9d758c17b5c6fbd3feca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"DJMk3j496TedkWAhX7odmuNC6MocJod-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+    '__authKey' => 'ci0WkqB3kOUfkeybsVAAVI6Lh7cRqSGz'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'grocery-store'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_REFERER' => 'http://grocery-store/web/admin/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_identity=7abd32991104108f4661ec28d6cb89b263b85888c29fb03bd9fd1c58f6eabb29a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22ci0WkqB3kOUfkeybsVAAVI6Lh7cRqSGz%22%2C2592000%5D%22%3B%7D; PHPSESSID=v1l56lfpdkrnbogcda7j698kjkcp1ua5; _csrf=00dd4b38f4e5fb69b092db2dac9b22ab5f6ed0d16554f9d758c17b5c6fbd3feca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22DJMk3j496TedkWAhX7odmuNC6MocJod-%22%3B%7D'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP_8.1\\ext;c:\\ospanel\\modules\\php\\PHP_8.1\\pear;c:\\ospanel\\modules\\php\\PHP_8.1\\pear\\bin;c:\\ospanel\\modules\\php\\PHP_8.1;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\database\\MySQL-8.0-Win10\\bin;c:\\ospanel\\modules\\http\\Apache_2.4-PHP_8.0-8.1\\bin;c:\\ospanel\\modules\\http\\Apache_2.4-PHP_8.0-8.1;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'grocery-store'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/grocery-store'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/grocery-store'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/grocery-store/web/index.php'
+    'REMOTE_PORT' => '56573'
+    'REDIRECT_URL' => '/web/admin/products'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/web/admin/products'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1750708570.6936
+    'REQUEST_TIME' => 1750708570
+]
+2025-06-23 22:56:12 [127.0.0.1][2][v1l56lfpdkrnbogcda7j698kjkcp1ua5][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Setting unknown property: yii\grid\GridView::0 in C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Component.php:221
+Stack trace:
+#0 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\BaseYii.php(557): yii\base\Component->__set()
+#1 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\BaseObject.php(107): yii\BaseYii::configure()
+#2 [internal function]: yii\base\BaseObject->__construct()
+#3 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\di\Container.php(419): ReflectionClass->newInstanceArgs()
+#4 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\di\Container.php(170): yii\di\Container->build()
+#5 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\BaseYii.php(365): yii\di\Container->get()
+#6 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Widget.php(146): yii\BaseYii::createObject()
+#7 C:\OSPanel\domains\grocery-store\views\admin\products.php(16): yii\base\Widget::widget()
+#8 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\View.php(348): require('C:\\OSPanel\\doma...')
+#9 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile()
+#10 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile()
+#11 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render()
+#12 C:\OSPanel\domains\grocery-store\controllers\AdminController.php(41): yii\base\Controller->render()
+#13 [internal function]: app\controllers\AdminController->actionProducts()
+#14 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array()
+#15 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams()
+#16 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction()
+#17 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction()
+#18 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest()
+#19 C:\OSPanel\domains\grocery-store\web\index.php(12): yii\base\Application->run()
+#20 {main}
+2025-06-23 22:56:12 [127.0.0.1][2][v1l56lfpdkrnbogcda7j698kjkcp1ua5][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity' => '7abd32991104108f4661ec28d6cb89b263b85888c29fb03bd9fd1c58f6eabb29a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[2,\"ci0WkqB3kOUfkeybsVAAVI6Lh7cRqSGz\",2592000]\";}'
+    'PHPSESSID' => 'v1l56lfpdkrnbogcda7j698kjkcp1ua5'
+    '_csrf' => '00dd4b38f4e5fb69b092db2dac9b22ab5f6ed0d16554f9d758c17b5c6fbd3feca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"DJMk3j496TedkWAhX7odmuNC6MocJod-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+    '__authKey' => 'ci0WkqB3kOUfkeybsVAAVI6Lh7cRqSGz'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'grocery-store'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_REFERER' => 'http://grocery-store/web/admin/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_identity=7abd32991104108f4661ec28d6cb89b263b85888c29fb03bd9fd1c58f6eabb29a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22ci0WkqB3kOUfkeybsVAAVI6Lh7cRqSGz%22%2C2592000%5D%22%3B%7D; PHPSESSID=v1l56lfpdkrnbogcda7j698kjkcp1ua5; _csrf=00dd4b38f4e5fb69b092db2dac9b22ab5f6ed0d16554f9d758c17b5c6fbd3feca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22DJMk3j496TedkWAhX7odmuNC6MocJod-%22%3B%7D'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP_8.1\\ext;c:\\ospanel\\modules\\php\\PHP_8.1\\pear;c:\\ospanel\\modules\\php\\PHP_8.1\\pear\\bin;c:\\ospanel\\modules\\php\\PHP_8.1;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\database\\MySQL-8.0-Win10\\bin;c:\\ospanel\\modules\\http\\Apache_2.4-PHP_8.0-8.1\\bin;c:\\ospanel\\modules\\http\\Apache_2.4-PHP_8.0-8.1;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'grocery-store'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/grocery-store'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/grocery-store'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/grocery-store/web/index.php'
+    'REMOTE_PORT' => '56619'
+    'REDIRECT_URL' => '/web/admin/products'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/web/admin/products'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1750708572.5676
+    'REQUEST_TIME' => 1750708572
+]
+2025-06-23 22:56:13 [127.0.0.1][2][v1l56lfpdkrnbogcda7j698kjkcp1ua5][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Setting unknown property: yii\grid\GridView::0 in C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Component.php:221
+Stack trace:
+#0 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\BaseYii.php(557): yii\base\Component->__set()
+#1 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\BaseObject.php(107): yii\BaseYii::configure()
+#2 [internal function]: yii\base\BaseObject->__construct()
+#3 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\di\Container.php(419): ReflectionClass->newInstanceArgs()
+#4 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\di\Container.php(170): yii\di\Container->build()
+#5 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\BaseYii.php(365): yii\di\Container->get()
+#6 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Widget.php(146): yii\BaseYii::createObject()
+#7 C:\OSPanel\domains\grocery-store\views\admin\products.php(16): yii\base\Widget::widget()
+#8 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\View.php(348): require('C:\\OSPanel\\doma...')
+#9 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile()
+#10 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile()
+#11 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render()
+#12 C:\OSPanel\domains\grocery-store\controllers\AdminController.php(41): yii\base\Controller->render()
+#13 [internal function]: app\controllers\AdminController->actionProducts()
+#14 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array()
+#15 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams()
+#16 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction()
+#17 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction()
+#18 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest()
+#19 C:\OSPanel\domains\grocery-store\web\index.php(12): yii\base\Application->run()
+#20 {main}
+2025-06-23 22:56:13 [127.0.0.1][2][v1l56lfpdkrnbogcda7j698kjkcp1ua5][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity' => '7abd32991104108f4661ec28d6cb89b263b85888c29fb03bd9fd1c58f6eabb29a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[2,\"ci0WkqB3kOUfkeybsVAAVI6Lh7cRqSGz\",2592000]\";}'
+    'PHPSESSID' => 'v1l56lfpdkrnbogcda7j698kjkcp1ua5'
+    '_csrf' => '00dd4b38f4e5fb69b092db2dac9b22ab5f6ed0d16554f9d758c17b5c6fbd3feca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"DJMk3j496TedkWAhX7odmuNC6MocJod-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+    '__authKey' => 'ci0WkqB3kOUfkeybsVAAVI6Lh7cRqSGz'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'grocery-store'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_REFERER' => 'http://grocery-store/web/admin/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_identity=7abd32991104108f4661ec28d6cb89b263b85888c29fb03bd9fd1c58f6eabb29a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22ci0WkqB3kOUfkeybsVAAVI6Lh7cRqSGz%22%2C2592000%5D%22%3B%7D; PHPSESSID=v1l56lfpdkrnbogcda7j698kjkcp1ua5; _csrf=00dd4b38f4e5fb69b092db2dac9b22ab5f6ed0d16554f9d758c17b5c6fbd3feca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22DJMk3j496TedkWAhX7odmuNC6MocJod-%22%3B%7D'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP_8.1\\ext;c:\\ospanel\\modules\\php\\PHP_8.1\\pear;c:\\ospanel\\modules\\php\\PHP_8.1\\pear\\bin;c:\\ospanel\\modules\\php\\PHP_8.1;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\database\\MySQL-8.0-Win10\\bin;c:\\ospanel\\modules\\http\\Apache_2.4-PHP_8.0-8.1\\bin;c:\\ospanel\\modules\\http\\Apache_2.4-PHP_8.0-8.1;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'grocery-store'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/grocery-store'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/grocery-store'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/grocery-store/web/index.php'
+    'REMOTE_PORT' => '56623'
+    'REDIRECT_URL' => '/web/admin/products'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/web/admin/products'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1750708573.3115
+    'REQUEST_TIME' => 1750708573
+]
+2025-06-23 22:56:14 [127.0.0.1][2][v1l56lfpdkrnbogcda7j698kjkcp1ua5][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Setting unknown property: yii\grid\GridView::0 in C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Component.php:221
+Stack trace:
+#0 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\BaseYii.php(557): yii\base\Component->__set()
+#1 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\BaseObject.php(107): yii\BaseYii::configure()
+#2 [internal function]: yii\base\BaseObject->__construct()
+#3 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\di\Container.php(419): ReflectionClass->newInstanceArgs()
+#4 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\di\Container.php(170): yii\di\Container->build()
+#5 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\BaseYii.php(365): yii\di\Container->get()
+#6 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Widget.php(146): yii\BaseYii::createObject()
+#7 C:\OSPanel\domains\grocery-store\views\admin\products.php(16): yii\base\Widget::widget()
+#8 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\View.php(348): require('C:\\OSPanel\\doma...')
+#9 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile()
+#10 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile()
+#11 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render()
+#12 C:\OSPanel\domains\grocery-store\controllers\AdminController.php(41): yii\base\Controller->render()
+#13 [internal function]: app\controllers\AdminController->actionProducts()
+#14 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array()
+#15 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams()
+#16 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction()
+#17 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction()
+#18 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest()
+#19 C:\OSPanel\domains\grocery-store\web\index.php(12): yii\base\Application->run()
+#20 {main}
+2025-06-23 22:56:13 [127.0.0.1][2][v1l56lfpdkrnbogcda7j698kjkcp1ua5][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity' => '7abd32991104108f4661ec28d6cb89b263b85888c29fb03bd9fd1c58f6eabb29a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[2,\"ci0WkqB3kOUfkeybsVAAVI6Lh7cRqSGz\",2592000]\";}'
+    'PHPSESSID' => 'v1l56lfpdkrnbogcda7j698kjkcp1ua5'
+    '_csrf' => '00dd4b38f4e5fb69b092db2dac9b22ab5f6ed0d16554f9d758c17b5c6fbd3feca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"DJMk3j496TedkWAhX7odmuNC6MocJod-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+    '__authKey' => 'ci0WkqB3kOUfkeybsVAAVI6Lh7cRqSGz'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'grocery-store'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_REFERER' => 'http://grocery-store/web/admin/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_identity=7abd32991104108f4661ec28d6cb89b263b85888c29fb03bd9fd1c58f6eabb29a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22ci0WkqB3kOUfkeybsVAAVI6Lh7cRqSGz%22%2C2592000%5D%22%3B%7D; PHPSESSID=v1l56lfpdkrnbogcda7j698kjkcp1ua5; _csrf=00dd4b38f4e5fb69b092db2dac9b22ab5f6ed0d16554f9d758c17b5c6fbd3feca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22DJMk3j496TedkWAhX7odmuNC6MocJod-%22%3B%7D'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP_8.1\\ext;c:\\ospanel\\modules\\php\\PHP_8.1\\pear;c:\\ospanel\\modules\\php\\PHP_8.1\\pear\\bin;c:\\ospanel\\modules\\php\\PHP_8.1;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\database\\MySQL-8.0-Win10\\bin;c:\\ospanel\\modules\\http\\Apache_2.4-PHP_8.0-8.1\\bin;c:\\ospanel\\modules\\http\\Apache_2.4-PHP_8.0-8.1;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'grocery-store'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/grocery-store'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/grocery-store'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/grocery-store/web/index.php'
+    'REMOTE_PORT' => '56626'
+    'REDIRECT_URL' => '/web/admin/products'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/web/admin/products'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1750708573.8932
+    'REQUEST_TIME' => 1750708573
+]
+2025-06-23 22:58:53 [127.0.0.1][2][v1l56lfpdkrnbogcda7j698kjkcp1ua5][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Setting unknown property: yii\grid\ActionColumn::deleteOptions in C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\BaseObject.php:163
+Stack trace:
+#0 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\BaseYii.php(557): yii\base\BaseObject->__set()
+#1 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\BaseObject.php(107): yii\BaseYii::configure()
+#2 [internal function]: yii\base\BaseObject->__construct()
+#3 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\di\Container.php(419): ReflectionClass->newInstanceArgs()
+#4 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\di\Container.php(170): yii\di\Container->build()
+#5 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\BaseYii.php(365): yii\di\Container->get()
+#6 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\grid\GridView.php(550): yii\BaseYii::createObject()
+#7 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\grid\GridView.php(288): yii\grid\GridView->initColumns()
+#8 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\grid\GridView->init()
+#9 [internal function]: yii\base\BaseObject->__construct()
+#10 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\di\Container.php(419): ReflectionClass->newInstanceArgs()
+#11 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\di\Container.php(170): yii\di\Container->build()
+#12 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\BaseYii.php(365): yii\di\Container->get()
+#13 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Widget.php(146): yii\BaseYii::createObject()
+#14 C:\OSPanel\domains\grocery-store\views\admin\products.php(16): yii\base\Widget::widget()
+#15 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\View.php(348): require('C:\\OSPanel\\doma...')
+#16 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile()
+#17 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile()
+#18 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render()
+#19 C:\OSPanel\domains\grocery-store\controllers\AdminController.php(41): yii\base\Controller->render()
+#20 [internal function]: app\controllers\AdminController->actionProducts()
+#21 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array()
+#22 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams()
+#23 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction()
+#24 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction()
+#25 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest()
+#26 C:\OSPanel\domains\grocery-store\web\index.php(12): yii\base\Application->run()
+#27 {main}
+2025-06-23 22:58:53 [127.0.0.1][2][v1l56lfpdkrnbogcda7j698kjkcp1ua5][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity' => '7abd32991104108f4661ec28d6cb89b263b85888c29fb03bd9fd1c58f6eabb29a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[2,\"ci0WkqB3kOUfkeybsVAAVI6Lh7cRqSGz\",2592000]\";}'
+    'PHPSESSID' => 'v1l56lfpdkrnbogcda7j698kjkcp1ua5'
+    '_csrf' => '00dd4b38f4e5fb69b092db2dac9b22ab5f6ed0d16554f9d758c17b5c6fbd3feca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"DJMk3j496TedkWAhX7odmuNC6MocJod-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+    '__authKey' => 'ci0WkqB3kOUfkeybsVAAVI6Lh7cRqSGz'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'grocery-store'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_REFERER' => 'http://grocery-store/web/admin/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_identity=7abd32991104108f4661ec28d6cb89b263b85888c29fb03bd9fd1c58f6eabb29a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22ci0WkqB3kOUfkeybsVAAVI6Lh7cRqSGz%22%2C2592000%5D%22%3B%7D; PHPSESSID=v1l56lfpdkrnbogcda7j698kjkcp1ua5; _csrf=00dd4b38f4e5fb69b092db2dac9b22ab5f6ed0d16554f9d758c17b5c6fbd3feca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22DJMk3j496TedkWAhX7odmuNC6MocJod-%22%3B%7D'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP_8.1\\ext;c:\\ospanel\\modules\\php\\PHP_8.1\\pear;c:\\ospanel\\modules\\php\\PHP_8.1\\pear\\bin;c:\\ospanel\\modules\\php\\PHP_8.1;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\database\\MySQL-8.0-Win10\\bin;c:\\ospanel\\modules\\http\\Apache_2.4-PHP_8.0-8.1\\bin;c:\\ospanel\\modules\\http\\Apache_2.4-PHP_8.0-8.1;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'grocery-store'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/grocery-store'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/grocery-store'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/grocery-store/web/index.php'
+    'REMOTE_PORT' => '56660'
+    'REDIRECT_URL' => '/web/admin/products'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/web/admin/products'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1750708733.4602
+    'REQUEST_TIME' => 1750708733
+]
+2025-06-23 23:07:19 [127.0.0.1][2][v1l56lfpdkrnbogcda7j698kjkcp1ua5][error][yii\web\HttpException:405] yii\web\MethodNotAllowedHttpException: Method Not Allowed. This URL can only handle the following request methods: POST. in C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\filters\VerbFilter.php:108
+Stack trace:
+#0 [internal function]: yii\filters\VerbFilter->beforeAction()
+#1 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Component.php(645): call_user_func()
+#2 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Controller.php(297): yii\base\Component->trigger()
+#3 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\web\Controller.php(219): yii\base\Controller->beforeAction()
+#4 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Controller.php(176): yii\web\Controller->beforeAction()
+#5 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction()
+#6 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction()
+#7 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest()
+#8 C:\OSPanel\domains\grocery-store\web\index.php(12): yii\base\Application->run()
+#9 {main}
+2025-06-23 23:07:18 [127.0.0.1][2][v1l56lfpdkrnbogcda7j698kjkcp1ua5][info][application] $_GET = [
+    'id' => '3'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity' => '7abd32991104108f4661ec28d6cb89b263b85888c29fb03bd9fd1c58f6eabb29a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[2,\"ci0WkqB3kOUfkeybsVAAVI6Lh7cRqSGz\",2592000]\";}'
+    'PHPSESSID' => 'v1l56lfpdkrnbogcda7j698kjkcp1ua5'
+    '_csrf' => '00dd4b38f4e5fb69b092db2dac9b22ab5f6ed0d16554f9d758c17b5c6fbd3feca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"DJMk3j496TedkWAhX7odmuNC6MocJod-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+    '__authKey' => 'ci0WkqB3kOUfkeybsVAAVI6Lh7cRqSGz'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'grocery-store'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_REFERER' => 'http://grocery-store/web/admin/products?page=1&per-page=12'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_identity=7abd32991104108f4661ec28d6cb89b263b85888c29fb03bd9fd1c58f6eabb29a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22ci0WkqB3kOUfkeybsVAAVI6Lh7cRqSGz%22%2C2592000%5D%22%3B%7D; PHPSESSID=v1l56lfpdkrnbogcda7j698kjkcp1ua5; _csrf=00dd4b38f4e5fb69b092db2dac9b22ab5f6ed0d16554f9d758c17b5c6fbd3feca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22DJMk3j496TedkWAhX7odmuNC6MocJod-%22%3B%7D'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP_8.1\\ext;c:\\ospanel\\modules\\php\\PHP_8.1\\pear;c:\\ospanel\\modules\\php\\PHP_8.1\\pear\\bin;c:\\ospanel\\modules\\php\\PHP_8.1;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\database\\MySQL-8.0-Win10\\bin;c:\\ospanel\\modules\\http\\Apache_2.4-PHP_8.0-8.1\\bin;c:\\ospanel\\modules\\http\\Apache_2.4-PHP_8.0-8.1;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'grocery-store'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/grocery-store'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/grocery-store'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/grocery-store/web/index.php'
+    'REMOTE_PORT' => '56659'
+    'REDIRECT_URL' => '/web/product/delete'
+    'REDIRECT_QUERY_STRING' => 'id=3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=3'
+    'REQUEST_URI' => '/web/product/delete?id=3'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1750709238.9263
+    'REQUEST_TIME' => 1750709238
+]
+2025-06-24 00:05:34 [127.0.0.1][-][7jpp6s195bj7i4rlbouh2bnmfefr1lb4][error][yii\base\InvalidCallException] yii\base\InvalidCallException: Setting read-only property: app\models\Cart::cartItems in C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Component.php:218
+Stack trace:
+#0 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\db\BaseActiveRecord.php(322): yii\base\Component->__set()
+#1 C:\OSPanel\domains\grocery-store\controllers\CartController.php(69): yii\db\BaseActiveRecord->__set()
+#2 [internal function]: app\controllers\CartController->actionIndex()
+#3 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array()
+#4 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams()
+#5 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction()
+#6 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction()
+#7 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest()
+#8 C:\OSPanel\domains\grocery-store\web\index.php(12): yii\base\Application->run()
+#9 {main}
+2025-06-24 00:05:34 [127.0.0.1][-][7jpp6s195bj7i4rlbouh2bnmfefr1lb4][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '2719e538ba5719bbb8877f8e77112b0bd3c29643c87d315ec6dc942dbe384786a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tSvPz2R_wTMZtjXh47p2kuYK6Ad-iE9u\";}'
+    'PHPSESSID' => '7jpp6s195bj7i4rlbouh2bnmfefr1lb4'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'grocery-store'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_REFERER' => 'http://grocery-store/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_csrf=2719e538ba5719bbb8877f8e77112b0bd3c29643c87d315ec6dc942dbe384786a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tSvPz2R_wTMZtjXh47p2kuYK6Ad-iE9u%22%3B%7D; PHPSESSID=7jpp6s195bj7i4rlbouh2bnmfefr1lb4'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP_8.1\\ext;c:\\ospanel\\modules\\php\\PHP_8.1\\pear;c:\\ospanel\\modules\\php\\PHP_8.1\\pear\\bin;c:\\ospanel\\modules\\php\\PHP_8.1;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\database\\MySQL-8.0-Win10\\bin;c:\\ospanel\\modules\\http\\Apache_2.4-PHP_8.0-8.1\\bin;c:\\ospanel\\modules\\http\\Apache_2.4-PHP_8.0-8.1;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'grocery-store'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/grocery-store'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/grocery-store'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/grocery-store/web/index.php'
+    'REMOTE_PORT' => '58098'
+    'REDIRECT_URL' => '/web/cart/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/web/cart/index'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1750712734.1158
+    'REQUEST_TIME' => 1750712734
+]
+2025-06-24 01:08:37 [127.0.0.1][-][7kos9mc1kkruithcutg6a5h4gbg6j1ph][error][yii\base\ErrorException:2] yii\base\ErrorException: Undefined variable $app in C:\OSPanel\domains\grocery-store\views\cart\index.php:227
+Stack trace:
+#0 C:\OSPanel\domains\grocery-store\views\cart\index.php(227): yii\base\ErrorHandler->handleError()
+#1 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\View.php(348): require('C:\\OSPanel\\doma...')
+#2 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile()
+#3 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile()
+#4 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render()
+#5 C:\OSPanel\domains\grocery-store\controllers\CartController.php(89): yii\base\Controller->render()
+#6 [internal function]: app\controllers\CartController->actionIndex()
+#7 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array()
+#8 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams()
+#9 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction()
+#10 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction()
+#11 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest()
+#12 C:\OSPanel\domains\grocery-store\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2025-06-24 01:08:37 [127.0.0.1][-][7kos9mc1kkruithcutg6a5h4gbg6j1ph][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '01d7467118cac2c955c6fd019230607234468f705fe78743b12a500472c1bf25a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"4H6yM5FVqUsIH7wxR1zJVzfkzHdNVW-p\";}'
+    'PHPSESSID' => '7kos9mc1kkruithcutg6a5h4gbg6j1ph'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '_guest_cart' => [
+        11 => 2
+    ]
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'grocery-store'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_REFERER' => 'http://grocery-store/web/product/catalog'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_csrf=01d7467118cac2c955c6fd019230607234468f705fe78743b12a500472c1bf25a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%224H6yM5FVqUsIH7wxR1zJVzfkzHdNVW-p%22%3B%7D; PHPSESSID=7kos9mc1kkruithcutg6a5h4gbg6j1ph'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP_8.1\\ext;c:\\ospanel\\modules\\php\\PHP_8.1\\pear;c:\\ospanel\\modules\\php\\PHP_8.1\\pear\\bin;c:\\ospanel\\modules\\php\\PHP_8.1;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\database\\MySQL-8.0-Win10\\bin;c:\\ospanel\\modules\\http\\Apache_2.4-PHP_8.0-8.1\\bin;c:\\ospanel\\modules\\http\\Apache_2.4-PHP_8.0-8.1;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'grocery-store'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/grocery-store'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/grocery-store'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/grocery-store/web/index.php'
+    'REMOTE_PORT' => '59035'
+    'REDIRECT_URL' => '/web/cart/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/web/cart/index'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1750716517.2128
+    'REQUEST_TIME' => 1750716517
+]
+2025-06-24 01:08:42 [127.0.0.1][-][7kos9mc1kkruithcutg6a5h4gbg6j1ph][error][yii\base\ErrorException:2] yii\base\ErrorException: Undefined variable $app in C:\OSPanel\domains\grocery-store\views\cart\index.php:227
+Stack trace:
+#0 C:\OSPanel\domains\grocery-store\views\cart\index.php(227): yii\base\ErrorHandler->handleError()
+#1 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\View.php(348): require('C:\\OSPanel\\doma...')
+#2 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile()
+#3 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile()
+#4 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render()
+#5 C:\OSPanel\domains\grocery-store\controllers\CartController.php(89): yii\base\Controller->render()
+#6 [internal function]: app\controllers\CartController->actionIndex()
+#7 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array()
+#8 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams()
+#9 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction()
+#10 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction()
+#11 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest()
+#12 C:\OSPanel\domains\grocery-store\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2025-06-24 01:08:42 [127.0.0.1][-][7kos9mc1kkruithcutg6a5h4gbg6j1ph][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '01d7467118cac2c955c6fd019230607234468f705fe78743b12a500472c1bf25a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"4H6yM5FVqUsIH7wxR1zJVzfkzHdNVW-p\";}'
+    'PHPSESSID' => '7kos9mc1kkruithcutg6a5h4gbg6j1ph'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '_guest_cart' => [
+        11 => 2
+    ]
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'grocery-store'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_REFERER' => 'http://grocery-store/web/product/catalog'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_csrf=01d7467118cac2c955c6fd019230607234468f705fe78743b12a500472c1bf25a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%224H6yM5FVqUsIH7wxR1zJVzfkzHdNVW-p%22%3B%7D; PHPSESSID=7kos9mc1kkruithcutg6a5h4gbg6j1ph'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP_8.1\\ext;c:\\ospanel\\modules\\php\\PHP_8.1\\pear;c:\\ospanel\\modules\\php\\PHP_8.1\\pear\\bin;c:\\ospanel\\modules\\php\\PHP_8.1;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\database\\MySQL-8.0-Win10\\bin;c:\\ospanel\\modules\\http\\Apache_2.4-PHP_8.0-8.1\\bin;c:\\ospanel\\modules\\http\\Apache_2.4-PHP_8.0-8.1;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'grocery-store'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/grocery-store'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/grocery-store'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/grocery-store/web/index.php'
+    'REMOTE_PORT' => '59036'
+    'REDIRECT_URL' => '/web/cart/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/web/cart/index'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1750716522.2201
+    'REQUEST_TIME' => 1750716522
+]
+2025-06-24 01:09:33 [127.0.0.1][-][7kos9mc1kkruithcutg6a5h4gbg6j1ph][error][yii\base\ErrorException:2] yii\base\ErrorException: The use statement with non-compound name 'Yii' has no effect in C:\OSPanel\domains\grocery-store\views\cart\index.php:5
+Stack trace:
+#0 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\View.php(348): yii\base\ErrorHandler->handleError()
+#1 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\View.php(348): require()
+#2 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile()
+#3 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile()
+#4 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render()
+#5 C:\OSPanel\domains\grocery-store\controllers\CartController.php(89): yii\base\Controller->render()
+#6 [internal function]: app\controllers\CartController->actionIndex()
+#7 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array()
+#8 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams()
+#9 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction()
+#10 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction()
+#11 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest()
+#12 C:\OSPanel\domains\grocery-store\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2025-06-24 01:09:33 [127.0.0.1][-][7kos9mc1kkruithcutg6a5h4gbg6j1ph][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '01d7467118cac2c955c6fd019230607234468f705fe78743b12a500472c1bf25a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"4H6yM5FVqUsIH7wxR1zJVzfkzHdNVW-p\";}'
+    'PHPSESSID' => '7kos9mc1kkruithcutg6a5h4gbg6j1ph'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '_guest_cart' => [
+        11 => 2
+    ]
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'grocery-store'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_REFERER' => 'http://grocery-store/web/product/catalog'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_csrf=01d7467118cac2c955c6fd019230607234468f705fe78743b12a500472c1bf25a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%224H6yM5FVqUsIH7wxR1zJVzfkzHdNVW-p%22%3B%7D; PHPSESSID=7kos9mc1kkruithcutg6a5h4gbg6j1ph'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP_8.1\\ext;c:\\ospanel\\modules\\php\\PHP_8.1\\pear;c:\\ospanel\\modules\\php\\PHP_8.1\\pear\\bin;c:\\ospanel\\modules\\php\\PHP_8.1;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\database\\MySQL-8.0-Win10\\bin;c:\\ospanel\\modules\\http\\Apache_2.4-PHP_8.0-8.1\\bin;c:\\ospanel\\modules\\http\\Apache_2.4-PHP_8.0-8.1;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'grocery-store'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/grocery-store'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/grocery-store'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/grocery-store/web/index.php'
+    'REMOTE_PORT' => '59045'
+    'REDIRECT_URL' => '/web/cart/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/web/cart/index'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1750716573.8787
+    'REQUEST_TIME' => 1750716573
+]
+2025-06-24 01:10:39 [127.0.0.1][-][7kos9mc1kkruithcutg6a5h4gbg6j1ph][error][yii\base\ErrorException:2] yii\base\ErrorException: Undefined variable $app in C:\OSPanel\domains\grocery-store\views\cart\index.php:227
+Stack trace:
+#0 C:\OSPanel\domains\grocery-store\views\cart\index.php(227): yii\base\ErrorHandler->handleError()
+#1 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\View.php(348): require('C:\\OSPanel\\doma...')
+#2 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile()
+#3 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile()
+#4 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render()
+#5 C:\OSPanel\domains\grocery-store\controllers\CartController.php(89): yii\base\Controller->render()
+#6 [internal function]: app\controllers\CartController->actionIndex()
+#7 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array()
+#8 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams()
+#9 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction()
+#10 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction()
+#11 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest()
+#12 C:\OSPanel\domains\grocery-store\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2025-06-24 01:10:39 [127.0.0.1][-][7kos9mc1kkruithcutg6a5h4gbg6j1ph][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '01d7467118cac2c955c6fd019230607234468f705fe78743b12a500472c1bf25a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"4H6yM5FVqUsIH7wxR1zJVzfkzHdNVW-p\";}'
+    'PHPSESSID' => '7kos9mc1kkruithcutg6a5h4gbg6j1ph'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '_guest_cart' => [
+        11 => 2
+    ]
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'grocery-store'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_REFERER' => 'http://grocery-store/web/product/catalog'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_csrf=01d7467118cac2c955c6fd019230607234468f705fe78743b12a500472c1bf25a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%224H6yM5FVqUsIH7wxR1zJVzfkzHdNVW-p%22%3B%7D; PHPSESSID=7kos9mc1kkruithcutg6a5h4gbg6j1ph'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP_8.1\\ext;c:\\ospanel\\modules\\php\\PHP_8.1\\pear;c:\\ospanel\\modules\\php\\PHP_8.1\\pear\\bin;c:\\ospanel\\modules\\php\\PHP_8.1;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\database\\MySQL-8.0-Win10\\bin;c:\\ospanel\\modules\\http\\Apache_2.4-PHP_8.0-8.1\\bin;c:\\ospanel\\modules\\http\\Apache_2.4-PHP_8.0-8.1;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'grocery-store'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/grocery-store'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/grocery-store'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/grocery-store/web/index.php'
+    'REMOTE_PORT' => '59057'
+    'REDIRECT_URL' => '/web/cart/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/web/cart/index'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1750716639.5404
+    'REQUEST_TIME' => 1750716639
+]
+2025-06-24 01:10:40 [127.0.0.1][-][7kos9mc1kkruithcutg6a5h4gbg6j1ph][error][yii\base\ErrorException:2] yii\base\ErrorException: Undefined variable $app in C:\OSPanel\domains\grocery-store\views\cart\index.php:227
+Stack trace:
+#0 C:\OSPanel\domains\grocery-store\views\cart\index.php(227): yii\base\ErrorHandler->handleError()
+#1 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\View.php(348): require('C:\\OSPanel\\doma...')
+#2 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile()
+#3 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile()
+#4 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render()
+#5 C:\OSPanel\domains\grocery-store\controllers\CartController.php(89): yii\base\Controller->render()
+#6 [internal function]: app\controllers\CartController->actionIndex()
+#7 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array()
+#8 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams()
+#9 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction()
+#10 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction()
+#11 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest()
+#12 C:\OSPanel\domains\grocery-store\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2025-06-24 01:10:40 [127.0.0.1][-][7kos9mc1kkruithcutg6a5h4gbg6j1ph][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '01d7467118cac2c955c6fd019230607234468f705fe78743b12a500472c1bf25a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"4H6yM5FVqUsIH7wxR1zJVzfkzHdNVW-p\";}'
+    'PHPSESSID' => '7kos9mc1kkruithcutg6a5h4gbg6j1ph'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '_guest_cart' => [
+        11 => 2
+    ]
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'grocery-store'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_REFERER' => 'http://grocery-store/web/product/catalog'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_csrf=01d7467118cac2c955c6fd019230607234468f705fe78743b12a500472c1bf25a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%224H6yM5FVqUsIH7wxR1zJVzfkzHdNVW-p%22%3B%7D; PHPSESSID=7kos9mc1kkruithcutg6a5h4gbg6j1ph'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP_8.1\\ext;c:\\ospanel\\modules\\php\\PHP_8.1\\pear;c:\\ospanel\\modules\\php\\PHP_8.1\\pear\\bin;c:\\ospanel\\modules\\php\\PHP_8.1;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\database\\MySQL-8.0-Win10\\bin;c:\\ospanel\\modules\\http\\Apache_2.4-PHP_8.0-8.1\\bin;c:\\ospanel\\modules\\http\\Apache_2.4-PHP_8.0-8.1;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'grocery-store'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/grocery-store'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/grocery-store'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/grocery-store/web/index.php'
+    'REMOTE_PORT' => '59058'
+    'REDIRECT_URL' => '/web/cart/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/web/cart/index'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1750716640.3787
+    'REQUEST_TIME' => 1750716640
+]
+2025-06-24 01:12:41 [127.0.0.1][-][7kos9mc1kkruithcutg6a5h4gbg6j1ph][error][yii\base\ErrorException:2] yii\base\ErrorException: Undefined variable $app in C:\OSPanel\domains\grocery-store\views\cart\index.php:230
+Stack trace:
+#0 C:\OSPanel\domains\grocery-store\views\cart\index.php(230): yii\base\ErrorHandler->handleError()
+#1 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\View.php(348): require('C:\\OSPanel\\doma...')
+#2 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile()
+#3 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile()
+#4 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render()
+#5 C:\OSPanel\domains\grocery-store\controllers\CartController.php(89): yii\base\Controller->render()
+#6 [internal function]: app\controllers\CartController->actionIndex()
+#7 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array()
+#8 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams()
+#9 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction()
+#10 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction()
+#11 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest()
+#12 C:\OSPanel\domains\grocery-store\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2025-06-24 01:12:41 [127.0.0.1][-][7kos9mc1kkruithcutg6a5h4gbg6j1ph][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '01d7467118cac2c955c6fd019230607234468f705fe78743b12a500472c1bf25a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"4H6yM5FVqUsIH7wxR1zJVzfkzHdNVW-p\";}'
+    'PHPSESSID' => '7kos9mc1kkruithcutg6a5h4gbg6j1ph'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '_guest_cart' => [
+        11 => 2
+    ]
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'grocery-store'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_REFERER' => 'http://grocery-store/web/product/catalog'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_csrf=01d7467118cac2c955c6fd019230607234468f705fe78743b12a500472c1bf25a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%224H6yM5FVqUsIH7wxR1zJVzfkzHdNVW-p%22%3B%7D; PHPSESSID=7kos9mc1kkruithcutg6a5h4gbg6j1ph'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP_8.1\\ext;c:\\ospanel\\modules\\php\\PHP_8.1\\pear;c:\\ospanel\\modules\\php\\PHP_8.1\\pear\\bin;c:\\ospanel\\modules\\php\\PHP_8.1;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\database\\MySQL-8.0-Win10\\bin;c:\\ospanel\\modules\\http\\Apache_2.4-PHP_8.0-8.1\\bin;c:\\ospanel\\modules\\http\\Apache_2.4-PHP_8.0-8.1;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'grocery-store'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/grocery-store'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/grocery-store'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/grocery-store/web/index.php'
+    'REMOTE_PORT' => '59075'
+    'REDIRECT_URL' => '/web/cart/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/web/cart/index'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1750716761.5945
+    'REQUEST_TIME' => 1750716761
+]
+2025-06-24 01:12:42 [127.0.0.1][-][7kos9mc1kkruithcutg6a5h4gbg6j1ph][error][yii\base\ErrorException:2] yii\base\ErrorException: Undefined variable $app in C:\OSPanel\domains\grocery-store\views\cart\index.php:230
+Stack trace:
+#0 C:\OSPanel\domains\grocery-store\views\cart\index.php(230): yii\base\ErrorHandler->handleError()
+#1 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\View.php(348): require('C:\\OSPanel\\doma...')
+#2 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile()
+#3 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile()
+#4 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render()
+#5 C:\OSPanel\domains\grocery-store\controllers\CartController.php(89): yii\base\Controller->render()
+#6 [internal function]: app\controllers\CartController->actionIndex()
+#7 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array()
+#8 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams()
+#9 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction()
+#10 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction()
+#11 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest()
+#12 C:\OSPanel\domains\grocery-store\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2025-06-24 01:12:42 [127.0.0.1][-][7kos9mc1kkruithcutg6a5h4gbg6j1ph][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '01d7467118cac2c955c6fd019230607234468f705fe78743b12a500472c1bf25a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"4H6yM5FVqUsIH7wxR1zJVzfkzHdNVW-p\";}'
+    'PHPSESSID' => '7kos9mc1kkruithcutg6a5h4gbg6j1ph'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '_guest_cart' => [
+        11 => 2
+    ]
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'grocery-store'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_REFERER' => 'http://grocery-store/web/product/catalog'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_csrf=01d7467118cac2c955c6fd019230607234468f705fe78743b12a500472c1bf25a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%224H6yM5FVqUsIH7wxR1zJVzfkzHdNVW-p%22%3B%7D; PHPSESSID=7kos9mc1kkruithcutg6a5h4gbg6j1ph'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP_8.1\\ext;c:\\ospanel\\modules\\php\\PHP_8.1\\pear;c:\\ospanel\\modules\\php\\PHP_8.1\\pear\\bin;c:\\ospanel\\modules\\php\\PHP_8.1;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\database\\MySQL-8.0-Win10\\bin;c:\\ospanel\\modules\\http\\Apache_2.4-PHP_8.0-8.1\\bin;c:\\ospanel\\modules\\http\\Apache_2.4-PHP_8.0-8.1;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'grocery-store'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/grocery-store'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/grocery-store'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/grocery-store/web/index.php'
+    'REMOTE_PORT' => '59076'
+    'REDIRECT_URL' => '/web/cart/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/web/cart/index'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1750716762.6496
+    'REQUEST_TIME' => 1750716762
+]
+2025-06-24 01:13:34 [127.0.0.1][-][7kos9mc1kkruithcutg6a5h4gbg6j1ph][error][yii\base\ErrorException:2] yii\base\ErrorException: Undefined variable $app in C:\OSPanel\domains\grocery-store\views\cart\index.php:227
+Stack trace:
+#0 C:\OSPanel\domains\grocery-store\views\cart\index.php(227): yii\base\ErrorHandler->handleError()
+#1 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\View.php(348): require('C:\\OSPanel\\doma...')
+#2 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile()
+#3 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile()
+#4 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render()
+#5 C:\OSPanel\domains\grocery-store\controllers\CartController.php(89): yii\base\Controller->render()
+#6 [internal function]: app\controllers\CartController->actionIndex()
+#7 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array()
+#8 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams()
+#9 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction()
+#10 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction()
+#11 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest()
+#12 C:\OSPanel\domains\grocery-store\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2025-06-24 01:13:34 [127.0.0.1][-][7kos9mc1kkruithcutg6a5h4gbg6j1ph][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '01d7467118cac2c955c6fd019230607234468f705fe78743b12a500472c1bf25a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"4H6yM5FVqUsIH7wxR1zJVzfkzHdNVW-p\";}'
+    'PHPSESSID' => '7kos9mc1kkruithcutg6a5h4gbg6j1ph'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '_guest_cart' => [
+        11 => 2
+    ]
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'grocery-store'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_REFERER' => 'http://grocery-store/web/product/catalog'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_csrf=01d7467118cac2c955c6fd019230607234468f705fe78743b12a500472c1bf25a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%224H6yM5FVqUsIH7wxR1zJVzfkzHdNVW-p%22%3B%7D; PHPSESSID=7kos9mc1kkruithcutg6a5h4gbg6j1ph'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP_8.1\\ext;c:\\ospanel\\modules\\php\\PHP_8.1\\pear;c:\\ospanel\\modules\\php\\PHP_8.1\\pear\\bin;c:\\ospanel\\modules\\php\\PHP_8.1;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\database\\MySQL-8.0-Win10\\bin;c:\\ospanel\\modules\\http\\Apache_2.4-PHP_8.0-8.1\\bin;c:\\ospanel\\modules\\http\\Apache_2.4-PHP_8.0-8.1;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'grocery-store'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/grocery-store'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/grocery-store'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/grocery-store/web/index.php'
+    'REMOTE_PORT' => '59085'
+    'REDIRECT_URL' => '/web/cart/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/web/cart/index'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1750716814.8532
+    'REQUEST_TIME' => 1750716814
+]
+2025-06-24 01:13:35 [127.0.0.1][-][7kos9mc1kkruithcutg6a5h4gbg6j1ph][error][yii\base\ErrorException:2] yii\base\ErrorException: Undefined variable $app in C:\OSPanel\domains\grocery-store\views\cart\index.php:227
+Stack trace:
+#0 C:\OSPanel\domains\grocery-store\views\cart\index.php(227): yii\base\ErrorHandler->handleError()
+#1 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\View.php(348): require('C:\\OSPanel\\doma...')
+#2 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile()
+#3 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile()
+#4 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render()
+#5 C:\OSPanel\domains\grocery-store\controllers\CartController.php(89): yii\base\Controller->render()
+#6 [internal function]: app\controllers\CartController->actionIndex()
+#7 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array()
+#8 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams()
+#9 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction()
+#10 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction()
+#11 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest()
+#12 C:\OSPanel\domains\grocery-store\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2025-06-24 01:13:35 [127.0.0.1][-][7kos9mc1kkruithcutg6a5h4gbg6j1ph][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '01d7467118cac2c955c6fd019230607234468f705fe78743b12a500472c1bf25a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"4H6yM5FVqUsIH7wxR1zJVzfkzHdNVW-p\";}'
+    'PHPSESSID' => '7kos9mc1kkruithcutg6a5h4gbg6j1ph'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '_guest_cart' => [
+        11 => 2
+    ]
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'grocery-store'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_REFERER' => 'http://grocery-store/web/product/catalog'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_csrf=01d7467118cac2c955c6fd019230607234468f705fe78743b12a500472c1bf25a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%224H6yM5FVqUsIH7wxR1zJVzfkzHdNVW-p%22%3B%7D; PHPSESSID=7kos9mc1kkruithcutg6a5h4gbg6j1ph'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP_8.1\\ext;c:\\ospanel\\modules\\php\\PHP_8.1\\pear;c:\\ospanel\\modules\\php\\PHP_8.1\\pear\\bin;c:\\ospanel\\modules\\php\\PHP_8.1;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\database\\MySQL-8.0-Win10\\bin;c:\\ospanel\\modules\\http\\Apache_2.4-PHP_8.0-8.1\\bin;c:\\ospanel\\modules\\http\\Apache_2.4-PHP_8.0-8.1;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'grocery-store'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/grocery-store'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/grocery-store'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/grocery-store/web/index.php'
+    'REMOTE_PORT' => '59086'
+    'REDIRECT_URL' => '/web/cart/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/web/cart/index'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1750716815.7676
+    'REQUEST_TIME' => 1750716815
+]
+2025-06-24 01:20:28 [127.0.0.1][-][7kos9mc1kkruithcutg6a5h4gbg6j1ph][error][Error] Error: Object of class yii\web\View could not be converted to string in C:\OSPanel\domains\grocery-store\views\cart\index.php:183
+Stack trace:
+#0 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\View.php(348): require()
+#1 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile()
+#2 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile()
+#3 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render()
+#4 C:\OSPanel\domains\grocery-store\controllers\CartController.php(89): yii\base\Controller->render()
+#5 [internal function]: app\controllers\CartController->actionIndex()
+#6 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array()
+#7 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams()
+#8 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction()
+#9 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction()
+#10 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest()
+#11 C:\OSPanel\domains\grocery-store\web\index.php(12): yii\base\Application->run()
+#12 {main}
+2025-06-24 01:20:28 [127.0.0.1][-][7kos9mc1kkruithcutg6a5h4gbg6j1ph][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '01d7467118cac2c955c6fd019230607234468f705fe78743b12a500472c1bf25a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"4H6yM5FVqUsIH7wxR1zJVzfkzHdNVW-p\";}'
+    'PHPSESSID' => '7kos9mc1kkruithcutg6a5h4gbg6j1ph'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '_guest_cart' => [
+        11 => 2
+        24 => 1
+    ]
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'grocery-store'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_REFERER' => 'http://grocery-store/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_csrf=01d7467118cac2c955c6fd019230607234468f705fe78743b12a500472c1bf25a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%224H6yM5FVqUsIH7wxR1zJVzfkzHdNVW-p%22%3B%7D; PHPSESSID=7kos9mc1kkruithcutg6a5h4gbg6j1ph'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP_8.1\\ext;c:\\ospanel\\modules\\php\\PHP_8.1\\pear;c:\\ospanel\\modules\\php\\PHP_8.1\\pear\\bin;c:\\ospanel\\modules\\php\\PHP_8.1;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\database\\MySQL-8.0-Win10\\bin;c:\\ospanel\\modules\\http\\Apache_2.4-PHP_8.0-8.1\\bin;c:\\ospanel\\modules\\http\\Apache_2.4-PHP_8.0-8.1;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'grocery-store'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/grocery-store'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/grocery-store'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/grocery-store/web/index.php'
+    'REMOTE_PORT' => '59421'
+    'REDIRECT_URL' => '/web/cart/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/web/cart/index'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1750717228.4834
+    'REQUEST_TIME' => 1750717228
+]
+2025-06-25 14:36:32 [127.0.0.1][2][fhnlp8pih3rthaf8llh68bt60p60b7a1][error][TypeError] TypeError: yii\base\View::{closure}(): Argument #2 ($model) must be of type Product, app\models\Category given in C:\OSPanel\domains\grocery-store\views\category\index.php:63
+Stack trace:
+#0 [internal function]: yii\base\View->{closure}()
+#1 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\grid\ActionColumn.php(219): call_user_func()
+#2 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\grid\ActionColumn.php(245): yii\grid\ActionColumn->createUrl()
+#3 [internal function]: yii\grid\ActionColumn->yii\grid\{closure}()
+#4 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\grid\ActionColumn.php(250): preg_replace_callback()
+#5 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\grid\Column.php(111): yii\grid\ActionColumn->renderDataCellContent()
+#6 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\grid\GridView.php(525): yii\grid\Column->renderDataCell()
+#7 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\grid\GridView.php(494): yii\grid\GridView->renderTableRow()
+#8 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\grid\GridView.php(358): yii\grid\GridView->renderTableBody()
+#9 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\widgets\BaseListView.php(160): yii\grid\GridView->renderItems()
+#10 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\grid\GridView.php(326): yii\widgets\BaseListView->renderSection()
+#11 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\widgets\BaseListView.php(135): yii\grid\GridView->renderSection()
+#12 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}()
+#13 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\widgets\BaseListView.php(138): preg_replace_callback()
+#14 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\grid\GridView.php(301): yii\widgets\BaseListView->run()
+#15 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Widget.php(149): yii\grid\GridView->run()
+#16 C:\OSPanel\domains\grocery-store\views\category\index.php(65): yii\base\Widget::widget()
+#17 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\View.php(348): require('C:\\OSPanel\\doma...')
+#18 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile()
+#19 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile()
+#20 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render()
+#21 C:\OSPanel\domains\grocery-store\controllers\CategoryController.php(46): yii\base\Controller->render()
+#22 [internal function]: app\controllers\CategoryController->actionIndex()
+#23 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array()
+#24 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams()
+#25 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction()
+#26 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction()
+#27 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest()
+#28 C:\OSPanel\domains\grocery-store\web\index.php(12): yii\base\Application->run()
+#29 {main}
+2025-06-25 14:36:32 [127.0.0.1][2][fhnlp8pih3rthaf8llh68bt60p60b7a1][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity' => '7abd32991104108f4661ec28d6cb89b263b85888c29fb03bd9fd1c58f6eabb29a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[2,\"ci0WkqB3kOUfkeybsVAAVI6Lh7cRqSGz\",2592000]\";}'
+    'PHPSESSID' => 'fhnlp8pih3rthaf8llh68bt60p60b7a1'
+    '_csrf' => 'c6948fdfabb0e861c442ca13b7eaaa2df7f8f39b06aab4d267e596acd10c4a78a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"GoAzOakUXRcBKXDwCRCB9msnpVKZV208\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+    '__authKey' => 'ci0WkqB3kOUfkeybsVAAVI6Lh7cRqSGz'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'grocery-store'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_REFERER' => 'http://grocery-store/web/admin/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_identity=7abd32991104108f4661ec28d6cb89b263b85888c29fb03bd9fd1c58f6eabb29a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22ci0WkqB3kOUfkeybsVAAVI6Lh7cRqSGz%22%2C2592000%5D%22%3B%7D; PHPSESSID=fhnlp8pih3rthaf8llh68bt60p60b7a1; _csrf=c6948fdfabb0e861c442ca13b7eaaa2df7f8f39b06aab4d267e596acd10c4a78a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22GoAzOakUXRcBKXDwCRCB9msnpVKZV208%22%3B%7D'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP_8.1\\ext;c:\\ospanel\\modules\\php\\PHP_8.1\\pear;c:\\ospanel\\modules\\php\\PHP_8.1\\pear\\bin;c:\\ospanel\\modules\\php\\PHP_8.1;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\database\\MySQL-8.0-Win10\\bin;c:\\ospanel\\modules\\http\\Apache_2.4-PHP_8.0-8.1\\bin;c:\\ospanel\\modules\\http\\Apache_2.4-PHP_8.0-8.1;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'grocery-store'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/grocery-store'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/grocery-store'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/grocery-store/web/index.php'
+    'REMOTE_PORT' => '55418'
+    'REDIRECT_URL' => '/web/category/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/web/category/index'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1750851392.3059
+    'REQUEST_TIME' => 1750851392
+]
+2025-06-25 14:37:40 [127.0.0.1][2][fhnlp8pih3rthaf8llh68bt60p60b7a1][error][TypeError] TypeError: yii\base\View::{closure}(): Argument #2 ($model) must be of type Categgory, app\models\Category given in C:\OSPanel\domains\grocery-store\views\category\index.php:63
+Stack trace:
+#0 [internal function]: yii\base\View->{closure}()
+#1 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\grid\ActionColumn.php(219): call_user_func()
+#2 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\grid\ActionColumn.php(245): yii\grid\ActionColumn->createUrl()
+#3 [internal function]: yii\grid\ActionColumn->yii\grid\{closure}()
+#4 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\grid\ActionColumn.php(250): preg_replace_callback()
+#5 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\grid\Column.php(111): yii\grid\ActionColumn->renderDataCellContent()
+#6 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\grid\GridView.php(525): yii\grid\Column->renderDataCell()
+#7 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\grid\GridView.php(494): yii\grid\GridView->renderTableRow()
+#8 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\grid\GridView.php(358): yii\grid\GridView->renderTableBody()
+#9 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\widgets\BaseListView.php(160): yii\grid\GridView->renderItems()
+#10 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\grid\GridView.php(326): yii\widgets\BaseListView->renderSection()
+#11 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\widgets\BaseListView.php(135): yii\grid\GridView->renderSection()
+#12 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}()
+#13 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\widgets\BaseListView.php(138): preg_replace_callback()
+#14 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\grid\GridView.php(301): yii\widgets\BaseListView->run()
+#15 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Widget.php(149): yii\grid\GridView->run()
+#16 C:\OSPanel\domains\grocery-store\views\category\index.php(65): yii\base\Widget::widget()
+#17 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\View.php(348): require('C:\\OSPanel\\doma...')
+#18 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile()
+#19 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile()
+#20 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render()
+#21 C:\OSPanel\domains\grocery-store\controllers\CategoryController.php(46): yii\base\Controller->render()
+#22 [internal function]: app\controllers\CategoryController->actionIndex()
+#23 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array()
+#24 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams()
+#25 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction()
+#26 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction()
+#27 C:\OSPanel\domains\grocery-store\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest()
+#28 C:\OSPanel\domains\grocery-store\web\index.php(12): yii\base\Application->run()
+#29 {main}
+2025-06-25 14:37:40 [127.0.0.1][2][fhnlp8pih3rthaf8llh68bt60p60b7a1][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity' => '7abd32991104108f4661ec28d6cb89b263b85888c29fb03bd9fd1c58f6eabb29a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[2,\"ci0WkqB3kOUfkeybsVAAVI6Lh7cRqSGz\",2592000]\";}'
+    'PHPSESSID' => 'fhnlp8pih3rthaf8llh68bt60p60b7a1'
+    '_csrf' => 'c6948fdfabb0e861c442ca13b7eaaa2df7f8f39b06aab4d267e596acd10c4a78a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"GoAzOakUXRcBKXDwCRCB9msnpVKZV208\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+    '__authKey' => 'ci0WkqB3kOUfkeybsVAAVI6Lh7cRqSGz'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'grocery-store'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_REFERER' => 'http://grocery-store/web/admin/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_identity=7abd32991104108f4661ec28d6cb89b263b85888c29fb03bd9fd1c58f6eabb29a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22ci0WkqB3kOUfkeybsVAAVI6Lh7cRqSGz%22%2C2592000%5D%22%3B%7D; PHPSESSID=fhnlp8pih3rthaf8llh68bt60p60b7a1; _csrf=c6948fdfabb0e861c442ca13b7eaaa2df7f8f39b06aab4d267e596acd10c4a78a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22GoAzOakUXRcBKXDwCRCB9msnpVKZV208%22%3B%7D'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP_8.1\\ext;c:\\ospanel\\modules\\php\\PHP_8.1\\pear;c:\\ospanel\\modules\\php\\PHP_8.1\\pear\\bin;c:\\ospanel\\modules\\php\\PHP_8.1;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\database\\MySQL-8.0-Win10\\bin;c:\\ospanel\\modules\\http\\Apache_2.4-PHP_8.0-8.1\\bin;c:\\ospanel\\modules\\http\\Apache_2.4-PHP_8.0-8.1;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'grocery-store'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/grocery-store'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/grocery-store'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/grocery-store/web/index.php'
+    'REMOTE_PORT' => '55468'
+    'REDIRECT_URL' => '/web/category/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/web/category/index'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1750851460.4032
+    'REQUEST_TIME' => 1750851460
+]

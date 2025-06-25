@@ -20,10 +20,10 @@ $this->title = 'Корзина';
     </div>
 
     <div id="cart-content">
-    <?php if ($cart && !empty($cart->cartItems)): ?>
+    <?php if (!empty($cartItems)): ?>
         <div class="cart-items">
             <?php $totalSum = 0; ?>
-            <?php foreach ($cart->cartItems as $item): ?>
+            <?php foreach ($cartItems as $item): ?>
                 <?php
                     $product = $item->product;
                     $weight = $product->avg_weight ?: 'не указан';
@@ -90,19 +90,21 @@ $this->title = 'Корзина';
                     </div>
 
                     <!-- Кнопки изменения количества -->
+                    <?php $itemId = Yii::$app->user->isGuest ? $item->product_id : $item->id; ?>
+
                     <div class="d-flex align-items-center" style="flex: 1 1 160px; min-width: 160px;">
                         <div class="d-flex align-items-center flex-nowrap quantity-container">
-                            <button class="btn btn-outline-secondary btn-sm quantity-btn minus" data-item-id="<?= $item->id ?>">−</button>
-                            <span class="mx-2 fw-bold item-quantity" data-item-id="<?= $item->id ?>"><?= $item->quantity ?></span>
-                            <button class="btn btn-outline-secondary btn-sm quantity-btn plus" data-item-id="<?= $item->id ?>">+</button>
+                            <button class="btn btn-outline-secondary btn-sm quantity-btn minus" data-item-id="<?= $itemId ?>">−</button>
+                            <span class="mx-2 fw-bold item-quantity" data-item-id="<?= $itemId ?>">
+                                <?= $item->quantity ?>
+                            </span>
+                            <button class="btn btn-outline-secondary btn-sm quantity-btn plus" data-item-id="<?= $itemId ?>">+</button>
                         </div>
                     </div>
 
                     <!-- Кнопка удаления -->
                     <div style="flex: 0 0 auto;">
-                        <div style="flex: 0 0 auto;">
-                            <button class="btn btn-danger btn-sm delete-item-btn" data-id="<?= $item->id ?>">Удалить</button>
-                        </div>
+                        <button class="btn btn-danger btn-sm delete-item-btn" data-id="<?= $itemId ?>">Удалить</button>
                     </div>
                 </div>
             <?php endforeach; ?>
@@ -172,11 +174,15 @@ $this->title = 'Корзина';
 
 
 <?php
-$csrfToken = Yii::$app->request->csrfToken;
-$updateQuantityUrl = \yii\helpers\Url::to(['cart/update-quantity']);
-$deleteItemUrl = \yii\helpers\Url::to(['cart/delete-item']);
+$csrfToken = Yii::$app->request->getCsrfToken();
+$updateQuantityUrl = Url::to(['cart/update-quantity']);
+$decreaseUrl = Url::to(['cart/decrease']);
+$deleteItemUrl = Url::to(['cart/delete-item']);
+$isGuest = Yii::$app->user->isGuest ? 'true' : 'false';
 
 $this->registerJs(<<<JS
+const isGuest = $isGuest;
+
 document.querySelectorAll('.quantity-btn').forEach(button => {
     button.addEventListener('click', function () {
         const itemId = this.dataset.itemId;
@@ -185,7 +191,8 @@ document.querySelectorAll('.quantity-btn').forEach(button => {
 
         if (this.classList.contains('plus')) {
             quantity++;
-        } else if (this.classList.contains('minus') && quantity > 1) {
+        } else if (this.classList.contains('minus')) {
+            if (quantity <= 1) return;
             quantity--;
         }
 
@@ -201,7 +208,6 @@ document.querySelectorAll('.quantity-btn').forEach(button => {
         .then(data => {
             if (data.success) {
                 quantityElem.textContent = data.quantity;
-
                 const totalElem = document.querySelector('#cart-total-price');
                 if (totalElem && data.totalPrice) {
                     totalElem.textContent = data.totalPrice;
@@ -219,10 +225,13 @@ document.querySelectorAll('.quantity-btn').forEach(button => {
 document.querySelectorAll('.delete-item-btn').forEach(button => {
     button.addEventListener('click', function () {
         const itemId = this.dataset.id;
-
         if (!confirm('Удалить товар из корзины?')) return;
 
-        fetch('$deleteItemUrl?id=' + itemId, {
+        const deleteUrl = isGuest
+            ? '$decreaseUrl?id=' + itemId + '&force=1'
+            : '$deleteItemUrl?id=' + itemId;
+
+        fetch(deleteUrl, {
             method: 'POST',
             headers: {
                 'X-CSRF-Token': '$csrfToken',
@@ -250,8 +259,8 @@ function recalculateTotalPrice() {
     const cartItems = document.querySelectorAll('.cart-item');
     const totalElem = document.querySelector('#cart-total-price');
     const formElem = document.querySelector('form[action*="checkout"]');
-    const orderSumText = document.querySelector('h4'); // "Сумма заказа"
-    const deliveryNote = document.querySelector('p.text-muted'); // "Доставляем всё кратно..."
+    const orderSumText = document.querySelector('h4');
+    const deliveryNote = document.querySelector('p.text-muted');
     const customerDataSection = document.getElementById('customer-data-section');
 
     let total = 0;
